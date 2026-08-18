@@ -423,7 +423,7 @@
                         <!-- Conteúdo (à direita em telas maiores) -->
                         <div class="md:w-[calc(50%-2.5rem)] md:ml-auto">
                             <article
-                                class="bg-gray-900/40 backdrop-blur-sm border border-gray-700 p-6 rounded-2xl hover:bg-gray-800/60 transition-all duration-300 shadow-xl hover:shadow-sky-500/10 group relative overflow-hidden">
+                                class="timeline-card bg-gray-900/40 backdrop-blur-sm border border-gray-700 p-6 rounded-2xl hover:bg-gray-800/60 transition-all duration-300 shadow-xl hover:shadow-sky-500/10 group relative overflow-hidden">
                                 <div
                                     class="absolute top-0 left-0 w-1 h-full bg-sky-400 group-hover:w-2 transition-all duration-300">
                                 </div>
@@ -446,6 +446,13 @@
                                 <p class="text-gray-300 pl-2 leading-relaxed">Otimização de sistemas, diagnóstico e
                                     resolução de problemas de hardware/software. Foco em melhorar a performance e a vida
                                     útil dos equipamentos de tecnologia.</p>
+                                <div class="flex flex-wrap gap-2 mt-4">
+                                    <span class="timeline-tech">Windows</span>
+                                    <span class="timeline-tech">Linux</span>
+                                    <span class="timeline-tech">Hardware</span>
+                                    <span class="timeline-tech">Redes</span>
+                                    <span class="timeline-tech">Diagnóstico</span>
+                                </div>
                             </article>
                         </div>
                     </div>
@@ -459,7 +466,7 @@
                         <!-- Conteúdo (à esquerda em telas maiores) -->
                         <div class="md:w-[calc(50%-2.5rem)] md:mr-auto md:text-right">
                             <article
-                                class="bg-gray-900/40 backdrop-blur-sm border border-gray-700 p-6 rounded-2xl hover:bg-gray-800/60 transition-all duration-300 shadow-xl hover:shadow-purple-500/10 group relative overflow-hidden">
+                                class="timeline-card bg-gray-900/40 backdrop-blur-sm border border-gray-700 p-6 rounded-2xl hover:bg-gray-800/60 transition-all duration-300 shadow-xl hover:shadow-purple-500/10 group relative overflow-hidden">
                                 <div
                                     class="absolute top-0 right-0 w-1 h-full bg-purple-400 group-hover:w-2 transition-all duration-300 md:block hidden">
                                 </div>
@@ -484,7 +491,17 @@
                                 </div>
                                 <p class="text-gray-300 md:pr-2 pl-2 md:pl-0 leading-relaxed">Atendimento e orientação
                                     empresarial, gerenciamento de dados e realização de processos focados em simplificar
-                                    a rotina para os MEIs locais.</p>
+                                    a rotina para os MEIs locais.
+                                </p>
+                                <div class="flex flex-wrap gap-2 mt-4 md:justify-start">
+                                    <span class="timeline-tech">Word</span>
+                                    <span class="timeline-tech">Excel</span>
+                                    <span class="timeline-tech">Atendimento</span>
+                                    <span class="timeline-tech">CRM</span>
+                                    <span class="timeline-tech">Orientação</span>
+                                    <span class="timeline-tech">Processos</span>
+                                    <span class="timeline-tech">Vendas</span>
+                                </div>
                             </article>
                         </div>
                     </div>
@@ -498,7 +515,7 @@
                         <!-- Conteúdo (à direita em telas maiores) -->
                         <div class="md:w-[calc(50%-2.5rem)] md:ml-auto">
                             <article
-                                class="bg-gray-900/40 backdrop-blur-sm border border-gray-700 p-6 rounded-2xl hover:bg-gray-800/60 transition-all duration-300 shadow-xl hover:shadow-green-500/10 group relative overflow-hidden">
+                                class="timeline-card bg-gray-900/40 backdrop-blur-sm border border-gray-700 p-6 rounded-2xl hover:bg-gray-800/60 transition-all duration-300 shadow-xl hover:shadow-green-500/10 group relative overflow-hidden">
                                 <div
                                     class="absolute top-0 left-0 w-1 h-full bg-green-400 group-hover:w-2 transition-all duration-300">
                                 </div>
@@ -521,7 +538,15 @@
                                 </div>
                                 <p class="text-gray-300 pl-2 leading-relaxed">Desenvolvimento de habilidades de
                                     comunicação e aplicação de planos de aula e metodologias inovadoras no ensino,
-                                    aperfeiçoando o trabalho em equipe e didática.</p>
+                                    aperfeiçoando o trabalho em equipe e didática.
+                                </p>
+                                <div class="flex flex-wrap gap-2 mt-4">
+                                    <span class="timeline-tech">Didática</span>
+                                    <span class="timeline-tech">Trabalho em equipe</span>
+                                    <span class="timeline-tech">Comunicação</span>
+                                    <span class="timeline-tech">Metodologias ativas</span>
+                                </div>
+
                             </article>
                         </div>
                     </div>
@@ -722,8 +747,8 @@
                 <h2 id="projects-title" class="text-4xl font-extrabold text-center text-white mb-6 tracking-tight">Meus
                     Projetos</h2>
                 <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto text-lg">
-                    Estou atualmente refazendo meus projetos com tecnologias mais recentes. Em breve, esta seção estará
-                    cheia de exemplos reais do meu trabalho.
+                    Cada projeto conta uma história: problema, solução e resultado. Clique em um card para ver o estudo
+                    de caso completo.
                 </p>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto" role="list"
@@ -731,18 +756,30 @@
 
                     <!-- Card de Projeto 1 (Agência de Viagens) -->
                     <article
-                        class="bg-white/5 backdrop-blur-xl border border-white/10 p-1 rounded-3xl overflow-hidden hover:bg-white/10 transition-all duration-500 shadow-2xl hover:shadow-sky-500/10 group flex flex-col h-full"
-                        role="listitem">
+                        class="project-card bg-white/5 backdrop-blur-xl border border-white/10 p-1 rounded-3xl overflow-hidden hover:bg-white/10 transition-all duration-500 shadow-2xl hover:shadow-sky-500/10 group flex flex-col h-full"
+                        role="listitem" data-project="viagens" data-accent="sky">
                         <div
-                            class="bg-gray-800/80 h-48 sm:h-56 m-2 rounded-2xl flex items-center justify-center relative overflow-hidden group-hover:border-sky-500/50 border border-transparent transition-colors">
+                            class="project-card-media bg-gray-800/80 h-48 sm:h-56 m-2 rounded-2xl relative overflow-hidden border border-transparent group-hover:border-sky-500/50 transition-colors">
                             <img src="asset/Agencia-de-Viagens.png" alt="Miniatura do projeto Agência de Viagens"
                                 class="w-full h-full object-cover rounded-2xl transition-transform duration-500 group-hover:scale-105" />
+                            <div class="project-card-overlay" aria-hidden="true">
+                                <a href="https://viagens-landing-page-self.vercel.app/" target="_blank"
+                                    rel="noopener noreferrer" class="project-overlay-btn project-overlay-btn--demo"
+                                    onclick="event.stopPropagation()">Ver demo</a>
+                                <a href="https://github.com/jvaribeiro/viagens--landing-page" target="_blank"
+                                    rel="noopener noreferrer" class="project-overlay-btn project-overlay-btn--code"
+                                    onclick="event.stopPropagation()">Código</a>
+                            </div>
                         </div>
                         <div class="p-6 flex flex-col flex-grow">
+                            <span class="text-xs font-semibold text-sky-400 uppercase tracking-wider mb-2">estudo de
+                                caso</span>
                             <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-sky-400 transition-colors">
                                 Agência de Viagens</h3>
-                            <p class="text-gray-400 mb-6 flex-grow leading-relaxed">Landing page moderna para uma agência de turismo focada em vilarejos paradisíacos. Desenvolvida como projeto de certificação com foco em conversão, semântica HTML5, acessibilidade e design responsivo.</p>
-                            <div class="flex flex-wrap gap-2 mb-6" role="list" aria-label="Tecnologias usadas">
+                            <p class="text-gray-400 mb-4 flex-grow leading-relaxed line-clamp-3">Landing page de
+                                conversão para agência de turismo — semântica HTML5, acessibilidade e layout responsivo.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4" role="list" aria-label="Tecnologias usadas">
                                 <span
                                     class="bg-sky-500/10 text-sky-400 border border-sky-500/20 text-xs font-semibold px-3 py-1 rounded-full"
                                     role="listitem">HTML5</span>
@@ -752,140 +789,103 @@
                                 <span
                                     class="bg-sky-500/10 text-sky-400 border border-sky-500/20 text-xs font-semibold px-3 py-1 rounded-full"
                                     role="listitem">JavaScript</span>
-                                <span
-                                    class="bg-sky-500/10 text-sky-400 border border-sky-500/20 text-xs font-semibold px-3 py-1 rounded-full"
-                                    role="listitem">Font Awesome</span>
                             </div>
-                            <div class="flex space-x-6 mt-auto pt-4 border-t border-gray-700/50">
-                                <a href="https://github.com/jvaribeiro/viagens--landing-page"
-                                    class="flex items-center gap-2 text-gray-400 hover:text-sky-400 font-semibold transition-colors"
-                                    aria-label="Ver projeto no GitHub" target="_blank" rel="noopener noreferrer">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path fill-rule="evenodd"
-                                            d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                    Código
-                                </a>
-                                <a href="https://viagens-landing-page-self.vercel.app/"
-                                    class="flex items-center gap-2 text-gray-400 hover:text-sky-400 font-semibold transition-colors"
-                                    aria-label="Ver projeto online" target="_blank" rel="noopener noreferrer">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                    </svg>
-                                    Deploy
-                                </a>
-                            </div>
+                            <button type="button" class="project-case-btn mt-auto" data-open-case="viagens">
+                                Ler estudo de caso
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </button>
                         </div>
                     </article>
 
                     <!-- Card de Projeto 2 (TCC - Automação Pecuária) -->
                     <article
-                        class="bg-white/5 backdrop-blur-xl border border-white/10 p-1 rounded-3xl overflow-hidden hover:bg-white/10 transition-all duration-500 shadow-2xl hover:shadow-green-500/10 group flex flex-col h-full"
-                        role="listitem">
+                        class="project-card relative bg-white/5 backdrop-blur-xl border border-white/10 p-1 rounded-3xl overflow-hidden hover:bg-white/10 transition-all duration-500 shadow-2xl hover:shadow-green-500/10 group flex flex-col h-full ring-1 ring-green-500/20"
+                        role="listitem" data-project="automacao" data-accent="green">
+                        <div class="absolute top-4 right-4 z-20">
+                            <span
+                                class="inline-flex items-center gap-1.5 bg-green-500/20 text-green-300 text-xs font-bold px-3 py-1 rounded-full border border-green-500/30">
+                                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                    <path
+                                        d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.477.859h4.002z" />
+                                </svg>
+                                IoT + Web
+                            </span>
+                        </div>
                         <div
-                            class="bg-gray-800/80 h-48 sm:h-56 m-2 rounded-2xl flex items-center justify-center relative overflow-hidden group-hover:border-green-500/50 border border-transparent transition-colors">
+                            class="project-card-media bg-gray-800/80 h-48 sm:h-56 m-2 rounded-2xl relative overflow-hidden border border-transparent group-hover:border-green-500/50 transition-colors">
                             <img src="asset/Automacao-Pecuaria.jpeg" alt="Miniatura do projeto TCC - Automação Pecuária"
                                 class="w-full h-full object-cover rounded-2xl transition-transform duration-500 group-hover:scale-105" />
+                            <div class="project-card-overlay" aria-hidden="true">
+                                <a href="https://simulacao-sistema-de-automacao-pecu.vercel.app/" target="_blank"
+                                    rel="noopener noreferrer" class="project-overlay-btn project-overlay-btn--demo"
+                                    onclick="event.stopPropagation()">Ver demo</a>
+                                <a href="https://github.com/jvaribeiro/tcc-automacao" target="_blank"
+                                    rel="noopener noreferrer" class="project-overlay-btn project-overlay-btn--code"
+                                    onclick="event.stopPropagation()">Código</a>
+                            </div>
                         </div>
                         <div class="p-6 flex flex-col flex-grow">
+                            <span class="text-xs font-semibold text-green-400 uppercase tracking-wider mb-2">TCC ·
+                                Estudo de Caso</span>
                             <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors">
                                 Automação Pecuária</h3>
-                            <p class="text-gray-400 mb-6 flex-grow leading-relaxed">Sistema de automação de baixo custo para pecuária leiteira no Agreste Potiguar. Utiliza Raspberry Pi Pico W com sensores para monitoramento de temperatura, umidade e luminosidade, controlando atuadores como ventiladores e nebulizadores. Inclui dashboard web local para visualização em tempo real, com custo total de R$ 283,00.</p>
-                            <div class="flex flex-wrap gap-2 mb-6" role="list" aria-label="Tecnologias usadas">
+                            <p class="text-gray-400 mb-4 flex-grow leading-relaxed line-clamp-3">IoT de baixo custo com
+                                Raspberry Pi Pico W, sensores ambientais e dashboard web em tempo real — R$ 283,00.</p>
+                            <div class="flex flex-wrap gap-2 mb-4" role="list" aria-label="Tecnologias usadas">
                                 <span
                                     class="bg-green-500/10 text-green-400 border border-green-500/20 text-xs font-semibold px-3 py-1 rounded-full"
-                                    role="listitem">C</span>
+                                    role="listitem">C / Pico W</span>
                                 <span
                                     class="bg-green-500/10 text-green-400 border border-green-500/20 text-xs font-semibold px-3 py-1 rounded-full"
-                                    role="listitem">HTML</span>
+                                    role="listitem">IoT</span>
                                 <span
                                     class="bg-green-500/10 text-green-400 border border-green-500/20 text-xs font-semibold px-3 py-1 rounded-full"
-                                    role="listitem">CSS</span>
-                                <span
-                                    class="bg-green-500/10 text-green-400 border border-green-500/20 text-xs font-semibold px-3 py-1 rounded-full"
-                                    role="listitem">JavaScript</span>
-                                <span
-                                    class="bg-green-500/10 text-green-400 border border-green-500/20 text-xs font-semibold px-3 py-1 rounded-full"
-                                    role="listitem">Raspberry Pi Pico W</span>
+                                    role="listitem">Dashboard Web</span>
                             </div>
-                            <div class="flex space-x-6 mt-auto pt-4 border-t border-gray-700/50">
-                                <a href="https://github.com/jvaribeiro/tcc-automacao"
-                                    class="flex items-center gap-2 text-gray-400 hover:text-green-400 font-semibold transition-colors"
-                                    aria-label="Ver projeto no GitHub" target="_blank" rel="noopener noreferrer">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path fill-rule="evenodd"
-                                            d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                    Código
-                                </a>
-                                <a href="https://simulacao-sistema-de-automacao-pecu.vercel.app/"
-                                    class="flex items-center gap-2 text-gray-400 hover:text-green-400 font-semibold transition-colors"
-                                    aria-label="Ver projeto online" target="_blank" rel="noopener noreferrer">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                    </svg>
-                                    Exemplo Online
-                                </a>
-                            </div>
+                            <button type="button" class="project-case-btn project-case-btn--green mt-auto"
+                                data-open-case="automacao">
+                                Ler estudo de caso
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </button>
                         </div>
                     </article>
 
                     <!-- Card de Projeto 3 (Placeholder) -->
                     <article
-                        class="bg-white/5 backdrop-blur-xl border border-white/10 p-1 rounded-3xl overflow-hidden hover:bg-white/10 transition-all duration-500 shadow-2xl hover:shadow-purple-500/10 group flex flex-col h-full"
-                        role="listitem">
+                        class="project-card project-card--soon bg-white/5 backdrop-blur-xl border border-white/10 p-1 rounded-3xl overflow-hidden opacity-70 flex flex-col h-full"
+                        role="listitem" data-accent="purple">
                         <div
-                            class="bg-gray-800/80 h-48 sm:h-56 m-2 rounded-2xl flex flex-col items-center justify-center relative overflow-hidden group-hover:border-purple-500/50 border border-transparent transition-colors">
-                            <svg class="w-16 h-16 text-gray-600 group-hover:text-purple-500/50 transition-colors duration-500 mb-2"
-                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            class="project-card-media bg-gray-800/80 h-48 sm:h-56 m-2 rounded-2xl flex flex-col items-center justify-center relative overflow-hidden border border-dashed border-gray-600">
+                            <svg class="w-16 h-16 text-gray-600 mb-2" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                     d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
                                 </path>
                             </svg>
-                            <span
-                                class="text-gray-500 font-medium group-hover:text-purple-400/80 transition-colors duration-500">Em
-                                Breve</span>
+                            <span class="text-gray-500 font-medium">Em breve</span>
                         </div>
                         <div class="p-6 flex flex-col flex-grow">
-                            <h3
-                                class="text-2xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
-                                Nome do Projeto 3</h3>
-                            <p class="text-gray-400 mb-6 flex-grow leading-relaxed">Breve descrição do projeto, seus
-                                objetivos e os desafios superados durante o desenvolvimento.</p>
-                            <div class="flex flex-wrap gap-2 mb-6" role="list" aria-label="Tecnologias usadas">
+                            <span class="text-xs font-semibold text-purple-400 uppercase tracking-wider mb-2">Próximo
+                                projeto</span>
+                            <h3 class="text-2xl font-bold text-white mb-3">Próximo projeto</h3>
+                            <p class="text-gray-400 mb-4 flex-grow leading-relaxed">Próximo projeto</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
                                 <span
-                                    class="bg-purple-500/10 text-purple-400 border border-purple-500/20 text-xs font-semibold px-3 py-1 rounded-full"
-                                    role="listitem">PHP</span>
+                                    class="bg-purple-500/10 text-purple-400 border border-purple-500/20 text-xs font-semibold px-3 py-1 rounded-full">A
+                                    definir</span>
                                 <span
-                                    class="bg-purple-500/10 text-purple-400 border border-purple-500/20 text-xs font-semibold px-3 py-1 rounded-full"
-                                    role="listitem">Laravel</span>
+                                    class="bg-purple-500/10 text-purple-400 border border-purple-500/20 text-xs font-semibold px-3 py-1 rounded-full">A
+                                    definir</span>
                             </div>
-                            <div class="flex space-x-6 mt-auto pt-4 border-t border-gray-700/50">
-                                <a href="#"
-                                    class="flex items-center gap-2 text-gray-400 hover:text-purple-400 font-semibold transition-colors"
-                                    aria-label="Ver projeto no GitHub">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path fill-rule="evenodd"
-                                            d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                    Código
-                                </a>
-                                <a href="#"
-                                    class="flex items-center gap-2 text-gray-400 hover:text-purple-400 font-semibold transition-colors"
-                                    aria-label="Ver projeto online">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
-                                        </path>
-                                    </svg>
-                                    Deploy
-                                </a>
-                            </div>
+                            <span class="text-sm text-gray-500 mt-auto">Estudo de caso disponível em breve</span>
                         </div>
                     </article>
 
@@ -971,6 +971,21 @@
             </p>
         </div>
     </footer>
+
+    <!-- Modal Case Study -->
+    <div id="case-study-modal" class="case-study-modal hidden" role="dialog" aria-modal="true"
+        aria-labelledby="case-study-title" aria-hidden="true">
+        <div class="case-study-backdrop" data-close-case></div>
+        <div class="case-study-panel" role="document">
+            <button type="button" id="case-study-close" class="case-study-close" aria-label="Fechar case study">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+            <div id="case-study-content" class="case-study-content"></div>
+        </div>
+    </div>
 
     <!-- JavaScript -->
     <script src="script.js"></script>
