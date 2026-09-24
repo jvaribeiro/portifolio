@@ -478,3 +478,152 @@ body.modal-open {
     transition: none;
   }
 }
+
+/* Tema claro: papel fosco, contraste suave e leitura tranquila. */
+html,
+body {
+  background: #f4f1ea !important;
+  color: #344054 !important;
+}
+
+body {
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(238, 234, 225, 0.7)) !important;
+}
+
+body .bg-gray-900,
+body .bg-gray-800,
+body [class~="bg-[#0f172a]"] {
+  background-color: #f4f1ea !important;
+}
+
+body #home,
+body #skills {
+  background-color: #f4f1ea !important;
+}
+
+body .bg-gray-800 {
+  background-color: #eeebe3 !important;
+}
+
+body .bg-white\/5,
+body .bg-gray-900\/40,
+body .bg-gray-800\/50 {
+  background-color: rgba(255, 253, 248, 0.82) !important;
+}
+
+body .bg-white\/5:hover,
+body .bg-gray-800\/50:hover,
+body .bg-gray-800\/60,
+body .bg-gray-800\/70 {
+  background-color: #fffdf8 !important;
+}
+
+body .bg-white\/10 {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+}
+
+body .bg-gray-800\/80 {
+  background-color: #e6e1d7 !important;
+}
+
+body .text-white {
+  color: #263238 !important;
+}
+
+body .text-gray-300 {
+  color: #52606d !important;
+}
+
+body .text-gray-400 {
+  color: #667085 !important;
+}
+
+body .text-gray-500 {
+  color: #7b8490 !important;
+}
+
+body [class~="border-white/10"],
+body [class~="border-white/20"],
+body .border-gray-700,
+body [class~="border-gray-800/50"] {
+  border-color: rgba(71, 85, 105, 0.16) !important;
+}
+
+body .border-gray-600 {
+  border-color: rgba(71, 85, 105, 0.32) !important;
+}
+
+body [class~="bg-sky-500"].text-white,
+body [class~="bg-sky-500"] .text-white,
+body .bg-sky-500 {
+  color: #ffffff !important;
+}
+
+body .nav-active {
+  color: #0284c7 !important;
+  background-color: rgba(14, 165, 233, 0.1) !important;
+}
+
+body .project-card-overlay {
+  background: rgba(38, 50, 56, 0.76) !important;
+}
+
+body .project-overlay-btn--code,
+body .case-study-action--secondary {
+  color: #ffffff !important;
+  background: rgba(38, 50, 56, 0.78) !important;
+  border-color: rgba(255, 255, 255, 0.28) !important;
+}
+
+body .case-study-backdrop {
+  background: rgba(38, 50, 56, 0.45) !important;
+}
+
+body .case-study-panel {
+  background: #fffdf8 !important;
+  border-color: rgba(71, 85, 105, 0.18) !important;
+  box-shadow: 0 25px 50px -12px rgba(71, 85, 105, 0.24) !important;
+}
+
+body .case-study-title,
+body .case-study-section h4 {
+  color: #263238 !important;
+}
+
+body .case-study-media {
+  background: #eeebe3 !important;
+  border-color: rgba(71, 85, 105, 0.16) !important;
+}
+
+body .case-study-psr-item,
+body .case-study-tag,
+body .case-study-action--secondary {
+  background: rgba(71, 85, 105, 0.06) !important;
+  border-color: rgba(71, 85, 105, 0.14) !important;
+}
+
+body .case-study-psr-item p,
+body .case-study-tag,
+body .case-study-challenge,
+body .case-study-section .text-gray-300 {
+  color: #52606d !important;
+}
+
+body .case-study-actions {
+  border-top-color: rgba(71, 85, 105, 0.14) !important;
+}
+
+body .case-study-close {
+  color: #667085 !important;
+  background: rgba(71, 85, 105, 0.08) !important;
+}
+
+body .case-study-close:hover {
+  color: #263238 !important;
+  background: rgba(71, 85, 105, 0.14) !important;
+}
+
+body .animate-skill-blob,
+body .animate-skill-blob-reverse {
+  display: none !important;
+}
