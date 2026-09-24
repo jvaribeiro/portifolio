@@ -1,46 +1,5 @@
-/* Define a fonte Inter como padrão */
 body {
   font-family: "Inter", sans-serif;
-  background-color: #111827; /* bg-gray-900 */
-  color: #d1d5db; /* text-gray-300 */
-}
-
-
-/* Keyframes para a animação do gradiente */
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* Animação de fundo sutil na seção de habilidades */
-@keyframes skill-blob {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(15px, -15px) scale(1.03); }
-}
-
-@keyframes skill-blob-reverse {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(-15px, 15px) scale(1.03); }
-}
-
-.animate-skill-blob {
-  animation: skill-blob 18s ease-in-out infinite;
-}
-
-.animate-skill-blob-reverse {
-  animation: skill-blob-reverse 20s ease-in-out infinite;
-}
-
-/* Texto dos cards de habilidades em branco para maior contraste */
-#skills .text-gray-400 {
-  color: #ffffff !important;
 }
 
 /* Scroll Spy — link ativo na navegação */
@@ -416,45 +375,6 @@ body.modal-open {
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-/* Timeline expandível */
-.timeline-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.375rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: #9ca3af;
-  transition: color 0.2s ease;
-}
-
-.timeline-toggle:hover {
-  color: #38bdf8;
-}
-
-.timeline-toggle-icon {
-  transition: transform 0.3s ease;
-}
-
-.timeline-toggle[aria-expanded="true"] .timeline-toggle-icon {
-  transform: rotate(180deg);
-}
-
-.timeline-toggle[aria-expanded="true"] {
-  color: #38bdf8;
-}
-
-.timeline-expand {
-  overflow: hidden;
-  max-height: 0;
-  opacity: 0;
-  transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.3s ease;
-}
-
-.timeline-expand.is-open {
-  max-height: 500px;
-  opacity: 1;
-}
-
 .timeline-tech {
   font-size: 0.75rem;
   font-weight: 600;
@@ -468,10 +388,6 @@ body.modal-open {
 @media (prefers-reduced-motion: reduce) {
   .case-study-panel {
     animation: none;
-  }
-
-  .timeline-expand {
-    transition: none;
   }
 
   .project-card-overlay {
@@ -511,8 +427,6 @@ body .bg-gray-800\/50 {
   background-color: rgba(255, 253, 248, 0.82) !important;
 }
 
-body .bg-white\/5:hover,
-body .bg-gray-800\/50:hover,
 body .bg-gray-800\/60,
 body .bg-gray-800\/70 {
   background-color: #fffdf8 !important;
@@ -623,7 +537,40 @@ body .case-study-close:hover {
   background: rgba(71, 85, 105, 0.14) !important;
 }
 
-body .animate-skill-blob,
-body .animate-skill-blob-reverse {
-  display: none !important;
+/* Texto permanece estável; hover fica reservado para ações e mídia. */
+body #navigation a:hover,
+body #mobile-menu a:hover,
+body #about p:hover,
+body #skills span:hover,
+body #experience h3:hover,
+body #projects h3:hover,
+body #contact a[aria-label]:hover,
+body footer a:hover,
+body .group-hover\/item\:text-white:hover,
+body .group-hover\:text-sky-400:hover,
+body .group-hover\:text-purple-400:hover,
+body .group-hover\:text-green-400:hover,
+body .group-hover\/item\:text-white {
+  color: inherit !important;
+  background-color: transparent !important;
+  transform: none !important;
+}
+
+body #skills .group\/item:hover,
+body #about .group:hover,
+body #projects .project-card:hover,
+body #experience .timeline-card:hover,
+body #education article:hover {
+  transform: none !important;
+}
+
+body #home article:hover,
+body #about article:hover,
+body #skills .grid > div:hover,
+body #experience .timeline-card:hover,
+body #education article:hover,
+body #projects .project-card:hover,
+body #contact .max-w-4xl:hover {
+  background-color: #fffdf8 !important;
+  box-shadow: 0 10px 30px rgba(71, 85, 105, 0.08) !important;
 }
