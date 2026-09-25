@@ -106,7 +106,7 @@ const CASE_STUDIES = {
         title: 'Agência de Viagens',
         badge: 'Front-End · Case Study',
         problem: 'Agências de turismo locais precisavam de presença digital que convertesse visitantes em contatos, com foco em destinos de vilarejos e experiências autênticas.',
-        solution: 'Landing page responsiva com hierarquia visual clara, CTAs estratégicos, semântica HTML5, acessibilidade (WCAG básico) e design mobile-first.',
+        solution: 'Landing page responsiva com hierarquia visual clara, CTAs estratégicos, semântica HTML5, acessibilidade e design mobile-first.',
         result: 'Projeto de certificação aprovado com deploy em produção. Página leve, indexável e pronta para campanhas de marketing digital.',
         role: 'Desenvolvedor Front-End (projeto individual)',
         stack: ['HTML5', 'CSS3', 'JavaScript', 'Font Awesome', 'Vercel'],
