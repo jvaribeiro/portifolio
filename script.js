@@ -143,7 +143,7 @@ function renderCaseStudy(id) {
     const data = CASE_STUDIES[id];
     if (!data) return;
 
-    const badgeClass = 'case-study-badge--sky';
+    const badgeClass = 'case-study-badge--primary';
     const challengeClass = 'case-study-challenge';
     const primaryClass = 'case-study-action--primary';
 
