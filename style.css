@@ -601,8 +601,8 @@ body.modal-open {
   --muted-ink: #52606d;
   --line: rgba(71, 85, 105, 0.14);
   --accent: #3b82f6;
-  --accent-hover: #2563eb;
-  --accent-strong: #1d4ed8;
+  --accent-hover: var(--accent);
+  --accent-strong: var(--accent);
   --accent-rgb: 59, 130, 246;
 }
 
@@ -624,7 +624,7 @@ body {
 }
 
 #home > div[class*="bg-sky"],
-#home > div[class*="bg-purple"],
+#home > div[class*="bg-blue"],
 #home article > div[class*="bg-gradient"],
 #contact div[class*="bg-sky"],
 footer > div[class*="bg-sky"] {
