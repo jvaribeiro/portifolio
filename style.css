@@ -618,6 +618,154 @@ body.modal-open {
   line-height: 1.6;
 }
 
+/* Visual system: one calm canvas, with contrast reserved for content. */
+:root {
+  --page-background: #f4f1ea;
+  --surface: #fffdf8;
+  --ink: #263238;
+  --muted-ink: #52606d;
+  --line: rgba(71, 85, 105, 0.14);
+  --accent: #263238;
+}
+
+html,
+body,
+main,
+section,
+footer {
+  background-color: var(--page-background) !important;
+  background-image: none !important;
+}
+
+body {
+  color: var(--ink);
+}
+
+#home > div[class*="bg-sky"],
+#home > div[class*="bg-purple"],
+#home article > div[class*="bg-gradient"],
+#contact div[class*="bg-sky"],
+footer > div[class*="bg-sky"] {
+  display: none;
+}
+
+#header,
+#mobile-menu,
+#home article,
+#projects .project-card,
+#about article,
+#skills .bg-white\/5,
+#experience .timeline-card,
+#education article,
+#contact .max-w-4xl {
+  background-color: var(--surface) !important;
+  border-color: var(--line) !important;
+  box-shadow: 0 10px 30px rgba(71, 85, 105, 0.06);
+}
+
+#header {
+  backdrop-filter: none;
+}
+
+#home .bg-sky-500,
+#contact .bg-sky-500,
+.project-overlay-btn--demo {
+  background-color: var(--accent) !important;
+}
+
+#home .bg-sky-500:hover,
+#contact .bg-sky-500:hover,
+.project-overlay-btn--demo:hover {
+  background-color: #3f4b50 !important;
+}
+
+#home .shadow-\[0_0_20px_rgba\(56\,189\,248\,0\.4\)\],
+#home .shadow-\[0_0_30px_rgba\(56\,189\,248\,0\.6\)\],
+#contact .shadow-sky-500\/30 {
+  box-shadow: 0 10px 24px rgba(38, 50, 56, 0.14) !important;
+}
+
+body .nav-active {
+  color: var(--ink) !important;
+  background-color: rgba(38, 50, 56, 0.08);
+}
+
+/* Stack: cards alinhados e legíveis, sem perder a simplicidade do tema. */
+#skills .grid {
+  gap: 1.5rem;
+}
+
+#skills .grid > div {
+  min-height: 15rem;
+  padding: 2rem;
+  background: var(--surface) !important;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(71, 85, 105, 0.06);
+}
+
+#skills .grid > div:hover {
+  background: var(--surface) !important;
+  box-shadow: 0 14px 34px rgba(71, 85, 105, 0.1);
+}
+
+#skills .group\/item i {
+  filter: grayscale(0.25);
+  opacity: 0.9;
+}
+
+#skills .group\/item:hover i {
+  filter: grayscale(0);
+}
+
+.project-overlay-btn--demo,
+.project-case-btn,
+.project-case-btn--green {
+  background: #38bdf8 !important;
+  border-color: rgba(14, 116, 144, 0.25);
+  color: #0f172a !important;
+}
+
+.project-overlay-btn--demo:hover,
+.project-case-btn:hover,
+.project-case-btn--green:hover {
+  background: #0ea5e9 !important;
+}
+
+#contact a[href^="mailto:"] {
+  background: #38bdf8 !important;
+  color: #0f172a !important;
+  box-shadow: 0 10px 24px rgba(14, 165, 233, 0.2);
+}
+
+#contact a[href^="mailto:"]:hover {
+  background: #0ea5e9 !important;
+  box-shadow: 0 12px 28px rgba(14, 165, 233, 0.28);
+}
+
+#home a[download] {
+  background: var(--surface) !important;
+  border-color: var(--line) !important;
+  color: var(--ink) !important;
+  box-shadow: 0 10px 24px rgba(71, 85, 105, 0.08);
+}
+
+#home a[download]:hover {
+  background: #eeebe3 !important;
+  border-color: rgba(71, 85, 105, 0.24) !important;
+}
+
+#home a[href="#projects"] {
+  background: #38bdf8 !important;
+  color: #0f172a !important;
+  box-shadow: 0 10px 24px rgba(14, 165, 233, 0.2) !important;
+}
+
+#home a[href="#projects"]:hover {
+  background: #0ea5e9 !important;
+  box-shadow: 0 12px 28px rgba(14, 165, 233, 0.28) !important;
+}
+
 .case-study-section {
   margin-bottom: 1.5rem;
 }
