@@ -105,7 +105,6 @@ const CASE_STUDIES = {
     viagens: {
         title: 'Agência de Viagens',
         badge: 'Front-End · Case Study',
-        accent: 'sky',
         problem: 'Agências de turismo locais precisavam de presença digital que convertesse visitantes em contatos, com foco em destinos de vilarejos e experiências autênticas.',
         solution: 'Landing page responsiva com hierarquia visual clara, CTAs estratégicos, semântica HTML5, acessibilidade (WCAG básico) e design mobile-first.',
         result: 'Projeto de certificação aprovado com deploy em produção. Página leve, indexável e pronta para campanhas de marketing digital.',
@@ -121,7 +120,6 @@ const CASE_STUDIES = {
     automacao: {
         title: 'Automação Pecuária — TCC',
         badge: 'IoT + Dashboard Web · TCC IFRN',
-        accent: 'sky',
         problem: 'Produtores rurais do Agreste Potiguar enfrentam perdas por estresse térmico no gado leiteiro, sem soluções de monitoramento ambiental acessíveis (sistemas comerciais custam milhares).',
         solution: 'Sistema IoT de baixo custo (R$ 283,00) com Raspberry Pi Pico W, sensores DHT22/LDR, controle de ventiladores e nebulizadores via relés, e dashboard web local para monitoramento em tempo real.',
         result: 'TCC aprovado com protótipo funcional. Monitoramento contínuo de temperatura, umidade e luminosidade com acionamento automático de atuadores — solução viável para pequenos produtores.',
@@ -145,10 +143,9 @@ function renderCaseStudy(id) {
     const data = CASE_STUDIES[id];
     if (!data) return;
 
-    const isGreen = data.accent === 'green';
-    const badgeClass = isGreen ? 'case-study-badge--green' : 'case-study-badge--sky';
-    const challengeClass = isGreen ? 'case-study-challenge case-study-challenge--green' : 'case-study-challenge';
-    const primaryClass = isGreen ? 'case-study-action--primary-green' : 'case-study-action--primary';
+    const badgeClass = 'case-study-badge--sky';
+    const challengeClass = 'case-study-challenge';
+    const primaryClass = 'case-study-action--primary';
 
     const mediaHtml = data.mediaType === 'iframe'
         ? `<div class="case-study-media">
