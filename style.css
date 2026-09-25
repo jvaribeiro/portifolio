@@ -627,7 +627,7 @@ body {
 #home > div[class*="bg-blue"],
 #home article > div[class*="bg-gradient"],
 #contact div[class*="bg-sky"],
-footer > div[class*="bg-sky"] {
+footer > div[class*="bg-blue"] {
   display: none;
 }
 
