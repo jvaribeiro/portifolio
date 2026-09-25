@@ -777,6 +777,10 @@ body .nav-active {
   margin-bottom: 0.75rem;
 }
 
+.case-study-section p.text-gray-300 {
+  color: #3f4b50 !important;
+}
+
 .case-study-tags {
   display: flex;
   flex-wrap: wrap;

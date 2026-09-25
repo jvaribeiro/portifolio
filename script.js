@@ -121,7 +121,7 @@ const CASE_STUDIES = {
     automacao: {
         title: 'Automação Pecuária — TCC',
         badge: 'IoT + Dashboard Web · TCC IFRN',
-        accent: 'green',
+        accent: 'sky',
         problem: 'Produtores rurais do Agreste Potiguar enfrentam perdas por estresse térmico no gado leiteiro, sem soluções de monitoramento ambiental acessíveis (sistemas comerciais custam milhares).',
         solution: 'Sistema IoT de baixo custo (R$ 283,00) com Raspberry Pi Pico W, sensores DHT22/LDR, controle de ventiladores e nebulizadores via relés, e dashboard web local para monitoramento em tempo real.',
         result: 'TCC aprovado com protótipo funcional. Monitoramento contínuo de temperatura, umidade e luminosidade com acionamento automático de atuadores — solução viável para pequenos produtores.',
