@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="scroll-smooth">
+<html lang="pt-BR" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -33,16 +33,38 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
     <!-- Devicon Icons (para os ícones de linguagens) -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    },
+                    colors: {
+                        sky: {
+                            300: 'rgba(var(--accent-rgb), <alpha-value>)',
+                            400: 'rgba(var(--accent-rgb), <alpha-value>)',
+                            500: 'rgba(var(--accent-rgb), <alpha-value>)'
+                        },
+                        blue: {
+                            400: 'rgba(var(--accent-rgb), <alpha-value>)',
+                            500: 'rgba(var(--accent-rgb), <alpha-value>)'
+                        },
+                    }
+                }
+            }
+        };
+    </script>
+    <!-- Tema visual e componentes específicos do portfólio -->
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
-<body class="antialiased">
+<body class="antialiased font-sans">
 
     <!-- Skip Links para acessibilidade -->
     <a href="#main-content"
@@ -54,7 +76,7 @@
 
     <!-- CABEÇALHO E NAVEGAÇÃO -->
     <header id="header"
-        class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[95%] max-w-6xl bg-white/5 backdrop-blur-xl border border-white/10 rounded-full shadow-2xl transition-all duration-300"
+        class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[95%] max-w-6xl bg-white/5 border border-white/10 rounded-full shadow-2xl transition-all duration-300"
         role="banner">
         <div class="px-6 py-3 flex justify-between items-center w-full">
             <a href="https://jvaribeiro.vercel.app/" class="text-xl font-bold text-white flex-shrink-0"
@@ -128,10 +150,10 @@
             aria-labelledby="hero-title">
             <!-- Blobs de fundo para o efeito Glassmorphism -->
             <div
-                class="absolute top-1/4 left-1/4 w-96 h-96 bg-sky-500/20 rounded-full mix-blend-screen filter blur-[100px] opacity-60 animate-skill-blob pointer-events-none">
+                class="hidden absolute top-1/4 left-1/4 w-96 h-96 bg-sky-500/20 rounded-full mix-blend-screen filter blur-[100px] opacity-60 animate-skill-blob pointer-events-none">
             </div>
             <div
-                class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full mix-blend-screen filter blur-[100px] opacity-60 animate-skill-blob-reverse pointer-events-none">
+                class="hidden absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full mix-blend-screen filter blur-[100px] opacity-60 animate-skill-blob-reverse pointer-events-none">
             </div>
 
             <div class="container mx-auto px-6 relative z-10 w-full max-w-6xl">
@@ -140,7 +162,7 @@
                     class="bg-white/5 backdrop-blur-xl border border-white/10 p-10 md:p-16 rounded-[2.5rem] shadow-2xl flex flex-col items-center justify-center text-center hover:bg-white/10 transition-all duration-500 group relative overflow-hidden">
                     <!-- Brilho no hover -->
                     <div
-                        class="absolute inset-0 bg-gradient-to-tr from-sky-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                        class="hidden absolute inset-0 bg-gradient-to-tr from-sky-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                     </div>
 
                     <h1 id="hero-title"
@@ -158,7 +180,7 @@
                     <div
                         class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 w-full relative z-10">
                         <a href="#projects"
-                            class="bg-sky-500 text-white font-bold py-4 px-10 rounded-full hover:bg-sky-400 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 w-full sm:w-auto shadow-[0_0_20px_rgba(56,189,248,0.4)] hover:shadow-[0_0_30px_rgba(56,189,248,0.6)] flex items-center justify-center gap-2"
+                            class="bg-sky-500 text-white font-bold py-4 px-10 rounded-full hover:bg-sky-400 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 w-full sm:w-auto shadow-[0_10px_24px_rgba(59,130,246,0.2)] hover:shadow-[0_12px_28px_rgba(59,130,246,0.28)] flex items-center justify-center gap-2"
                             aria-label="Ver projetos de João Vitor">
                             Ver Projetos
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -169,7 +191,7 @@
                         </a>
                         <a href="asset/JOAO-VITOR-ALEXANDRE-RIBEIRO-CURRICULO.pdf"
                             download="JOAO-VITOR-ALEXANDRE-RIBEIRO-CURRICULO.pdf"
-                            class="bg-white/5 text-white border border-white/10 font-bold py-4 px-10 rounded-full hover:bg-white/10 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 flex items-center justify-center gap-3 w-full sm:w-auto shadow-lg backdrop-blur-md"
+                            class="bg-[#fffdf8] text-[#263238] border border-[rgba(71,85,105,0.14)] font-bold py-4 px-10 rounded-full hover:bg-[#eeebe3] transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 flex items-center justify-center gap-3 w-full sm:w-auto shadow-[0_10px_24px_rgba(71,85,105,0.08)] backdrop-blur-md"
                             aria-label="Baixar currículo de João Vitor">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
                                 fill="currentColor" aria-hidden="true">
@@ -201,17 +223,17 @@
                     <!-- Card de Projeto 1 (Agência de Viagens) -->
                     <article
                         class="project-card bg-white/5 backdrop-blur-xl border border-white/10 p-1 rounded-3xl overflow-hidden hover:bg-white/10 transition-all duration-500 shadow-2xl hover:shadow-sky-500/10 group flex flex-col h-full"
-                        role="listitem" data-project="viagens" data-accent="sky">
+                        role="listitem" data-project="viagens">
                         <div
-                            class="project-card-media bg-gray-800/80 h-48 sm:h-56 m-2 rounded-2xl relative overflow-hidden border border-transparent group-hover:border-sky-500/50 transition-colors">
+                            class="project-card-media group cursor-pointer bg-gray-800/80 h-48 sm:h-56 m-2 rounded-2xl relative overflow-hidden border border-transparent group-hover:border-sky-500/50 transition-colors">
                             <img src="asset/Agencia-de-Viagens.png" alt="Miniatura do projeto Agência de Viagens"
                                 class="w-full h-full object-cover rounded-2xl transition-transform duration-500 group-hover:scale-105" />
-                            <div class="project-card-overlay" aria-hidden="true">
+                            <div class="project-card-overlay absolute inset-0 flex items-center justify-center gap-3 rounded-2xl bg-[#263238]/70 backdrop-blur-sm opacity-0 transition-opacity duration-300 group-hover:opacity-100 focus-within:opacity-100" aria-hidden="true">
                                 <a href="https://viagens-landing-page-self.vercel.app/" target="_blank"
-                                    rel="noopener noreferrer" class="project-overlay-btn project-overlay-btn--demo"
+                                    rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full bg-blue-500 px-5 py-2.5 text-sm font-semibold text-[#263238] transition-transform duration-200 hover:scale-105 motion-reduce:transition-none motion-reduce:transform-none"
                                     onclick="event.stopPropagation()">Ver demo</a>
                                 <a href="https://github.com/jvaribeiro/viagens--landing-page" target="_blank"
-                                    rel="noopener noreferrer" class="project-overlay-btn project-overlay-btn--code"
+                                    rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-5 py-2.5 text-sm font-semibold text-[#fff] transition-transform duration-200 hover:scale-105 motion-reduce:transition-none motion-reduce:transform-none"
                                     onclick="event.stopPropagation()">Código</a>
                             </div>
                         </div>
@@ -234,7 +256,7 @@
                                     class="bg-sky-500/10 text-sky-400 border border-sky-500/20 text-xs font-semibold px-3 py-1 rounded-full"
                                     role="listitem">JavaScript</span>
                             </div>
-                            <button type="button" class="project-case-btn mt-auto" data-open-case="viagens">
+                            <button type="button" class="mt-auto inline-flex w-fit items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500 px-5 py-3 text-sm font-semibold text-[#263238] transition-all hover:translate-x-1 hover:bg-blue-500 motion-reduce:transition-none" data-open-case="viagens">
                                 Ler estudo de caso
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                     aria-hidden="true">
@@ -248,7 +270,7 @@
                     <!-- Card de Projeto 2 (TCC - Automação Pecuária) -->
                     <article
                         class="project-card relative bg-white/5 backdrop-blur-xl border border-white/10 p-1 rounded-3xl overflow-hidden hover:bg-white/10 transition-all duration-500 shadow-2xl hover:shadow-sky-500/10 group flex flex-col h-full ring-1 ring-sky-500/20"
-                        role="listitem" data-project="automacao" data-accent="sky">
+                        role="listitem" data-project="automacao">
                         <div class="absolute top-4 right-4 z-20">
                             <span
                                 class="inline-flex items-center gap-1.5 bg-sky-500/20 text-sky-300 text-xs font-bold px-3 py-1 rounded-full border border-sky-500/30">
@@ -260,15 +282,15 @@
                             </span>
                         </div>
                         <div
-                            class="project-card-media bg-gray-800/80 h-48 sm:h-56 m-2 rounded-2xl relative overflow-hidden border border-transparent group-hover:border-sky-500/50 transition-colors">
+                            class="project-card-media group cursor-pointer bg-gray-800/80 h-48 sm:h-56 m-2 rounded-2xl relative overflow-hidden border border-transparent group-hover:border-sky-500/50 transition-colors">
                             <img src="asset/Automacao-Pecuaria.jpeg" alt="Miniatura do projeto TCC - Automação Pecuária"
                                 class="w-full h-full object-cover rounded-2xl transition-transform duration-500 group-hover:scale-105" />
-                            <div class="project-card-overlay" aria-hidden="true">
+                            <div class="project-card-overlay absolute inset-0 flex items-center justify-center gap-3 rounded-2xl bg-[#263238]/70 backdrop-blur-sm opacity-0 transition-opacity duration-300 group-hover:opacity-100 focus-within:opacity-100" aria-hidden="true">
                                 <a href="https://simulacao-sistema-de-automacao-pecu.vercel.app/" target="_blank"
-                                    rel="noopener noreferrer" class="project-overlay-btn project-overlay-btn--demo"
+                                    rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full bg-blue-500 px-5 py-2.5 text-sm font-semibold text-[#263238] transition-transform duration-200 hover:scale-105 motion-reduce:transition-none motion-reduce:transform-none"
                                     onclick="event.stopPropagation()">Ver demo</a>
                                 <a href="https://github.com/jvaribeiro/tcc-automacao" target="_blank"
-                                    rel="noopener noreferrer" class="project-overlay-btn project-overlay-btn--code"
+                                    rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-5 py-2.5 text-sm font-semibold text-[#fff] transition-transform duration-200 hover:scale-105 motion-reduce:transition-none motion-reduce:transform-none"
                                     onclick="event.stopPropagation()">Código</a>
                             </div>
                         </div>
@@ -290,7 +312,7 @@
                                     class="bg-sky-500/10 text-sky-400 border border-sky-500/20 text-xs font-semibold px-3 py-1 rounded-full"
                                     role="listitem">Dashboard Web</span>
                             </div>
-                            <button type="button" class="project-case-btn mt-auto"
+                            <button type="button" class="mt-auto inline-flex w-fit items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500 px-5 py-3 text-sm font-semibold text-[#263238] transition-all hover:translate-x-1 hover:bg-blue-500"
                                 data-open-case="automacao">
                                 Ler estudo de caso
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -339,10 +361,8 @@
                             forma lógica e eficiente.
                         </p>
                         <p class="text-lg">
-                            O que me motiva é a capacidade de <strong class="text-sky-400 font-semibold">transformar uma
-                                ideia em um produto funcional e útil</strong>.
-                            Busco um ambiente onde eu possa colaborar, aprender com desenvolvedores experientes e
-                            aplicar minhas habilidades para criar valor.
+                            O que me motiva é a capacidade de transformar uma ideia em um produto funcional e útil.
+                            Busco um ambiente onde eu possa colaborar, aprender e aplicar minhas habilidades para agregar valor.
                         </p>
                     </div>
                 </article>
@@ -360,9 +380,9 @@
 
                     <!-- Front-End (Maior Destaque) -->
                     <div
-                        class="md:col-span-2 lg:col-span-2 flex flex-col bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-500 shadow-2xl hover:shadow-sky-500/10 group">
+                        class="md:col-span-2 lg:col-span-2 flex min-h-[15rem] flex-col rounded-2xl border border-[rgba(71,85,105,0.14)] bg-[#fffdf8] p-8 shadow-[0_10px_30px_rgba(71,85,105,0.06)] transition-all duration-500 hover:bg-[#fffdf8] hover:shadow-[0_14px_34px_rgba(71,85,105,0.1)] group">
                         <div class="flex items-center gap-4 mb-8">
-                            <h3 class="text-2xl font-bold text-white">Front-End</h3>
+                            <h3 class="text-xs font-bold uppercase tracking-[0.08em] text-[#263238]">Front-End</h3>
                         </div>
                         <div class="flex flex-wrap justify-center sm:justify-start gap-8 mt-auto">
                             <div
@@ -406,9 +426,9 @@
 
                     <!-- Bancos de Dados -->
                     <div
-                        class="md:col-span-1 lg:col-span-1 flex flex-col bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-500 shadow-2xl hover:shadow-blue-500/10 group">
+                        class="md:col-span-1 lg:col-span-1 flex min-h-[15rem] flex-col rounded-2xl border border-[rgba(71,85,105,0.14)] bg-[#fffdf8] p-8 shadow-[0_10px_30px_rgba(71,85,105,0.06)] transition-all duration-500 hover:bg-[#fffdf8] hover:shadow-[0_14px_34px_rgba(71,85,105,0.1)] group">
                         <div class="flex gap-4 mb-6 items-center">
-                            <h3 class="text-xl font-bold text-white">Bancos de Dados</h3>
+                            <h3 class="text-xs font-bold uppercase tracking-[0.08em] text-[#263238]">Bancos de Dados</h3>
                         </div>
                         <div class="flex justify-around mt-auto">
                             <div
@@ -421,16 +441,16 @@
                                 class="flex flex-col items-center gap-3 hover:scale-110 transition-transform duration-300 cursor-pointer group/item">
                                 <i class="devicon-mysql-plain colored text-5xl"></i>
                                 <span
-                                    class="text-sm text-gray-400 font-medium group-hover/item:text-white transition-colors duration-300">SQL</span>
+                                    class="text-sm text-gray-400 font-medium group-hover/item:text-white transition-colors duration-300">MySQL</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Back-End -->
                     <div
-                        class="md:col-span-2 lg:col-span-2 flex flex-col bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-500 shadow-2xl hover:shadow-orange-500/10 group">
+                        class="md:col-span-2 lg:col-span-2 flex min-h-[15rem] flex-col rounded-2xl border border-[rgba(71,85,105,0.14)] bg-[#fffdf8] p-8 shadow-[0_10px_30px_rgba(71,85,105,0.06)] transition-all duration-500 hover:bg-[#fffdf8] hover:shadow-[0_14px_34px_rgba(71,85,105,0.1)] group">
                         <div class="flex items-center gap-4 mb-8">
-                            <h3 class="text-2xl font-bold text-white">Back-End</h3>
+                            <h3 class="text-xs font-bold uppercase tracking-[0.08em] text-[#263238]">Back-End</h3>
                         </div>
                         <div class="flex flex-wrap justify-center sm:justify-start gap-8 mt-auto">
                             <div
@@ -468,9 +488,9 @@
 
                     <!-- Ferramentas e Mais -->
                     <div
-                        class="md:col-span-1 lg:col-span-1 flex flex-col bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-500 shadow-2xl hover:shadow-purple-500/10 group">
+                        class="md:col-span-1 lg:col-span-1 flex min-h-[15rem] flex-col rounded-2xl border border-[rgba(71,85,105,0.14)] bg-[#fffdf8] p-8 shadow-[0_10px_30px_rgba(71,85,105,0.06)] transition-all duration-500 hover:bg-[#fffdf8] hover:shadow-[0_14px_34px_rgba(71,85,105,0.1)] group">
                         <div class="flex gap-4 mb-6 items-center">
-                            <h3 class="text-xl font-bold text-white">Ferramentas & Ágil</h3>
+                            <h3 class="text-xs font-bold uppercase tracking-[0.08em] text-[#263238]">Ferramentas</h3>
                         </div>
                         <div class="flex justify-center gap-6 mb-6">
                             <div
@@ -489,12 +509,6 @@
                         <ul class="space-y-2.5 text-sm text-gray-400 mt-auto font-medium">
                             <li class="flex items-center gap-3 hover:translate-x-1 transition-transform cursor-pointer">
                                 <div class="w-1.5 h-1.5 rounded-full bg-sky-400"></div> Metodologias Ágeis
-                            </li>
-                            <li class="flex items-center gap-3 hover:translate-x-1 transition-transform cursor-pointer">
-                                <div class="w-1.5 h-1.5 rounded-full bg-purple-400"></div> Manutenção Hardware
-                            </li>
-                            <li class="flex items-center gap-3 hover:translate-x-1 transition-transform cursor-pointer">
-                                <div class="w-1.5 h-1.5 rounded-full bg-green-400"></div> Resolução de Problemas
                             </li>
                         </ul>
                     </div>
@@ -519,20 +533,20 @@
                     <!-- Item da Timeline 1 -->
                     <div class="relative pl-10 md:pl-0 mb-12" role="listitem">
                         <!-- Ponto na linha -->
-                        <div class="absolute w-5 h-5 bg-gray-800 border-4 border-sky-400 rounded-full mt-5 left-2.5 md:left-1/2 transform -translate-x-1/2 z-10 shadow-[0_0_15px_rgba(56,189,248,0.5)]"
+                        <div class="absolute w-5 h-5 bg-gray-800 border-4 border-blue-400 rounded-full mt-5 left-2.5 md:left-1/2 transform -translate-x-1/2 z-10 shadow-[0_0_15px_rgba(59,130,246,0.5)]"
                             aria-hidden="true"></div>
 
                         <!-- Conteúdo (à direita em telas maiores) -->
                         <div class="md:w-[calc(50%-2.5rem)] md:ml-auto">
                             <article
-                                class="timeline-card bg-gray-900/40 backdrop-blur-sm border border-gray-700 p-6 rounded-2xl hover:bg-gray-800/60 transition-all duration-300 shadow-xl hover:shadow-sky-500/10 group relative overflow-hidden">
+                                class="timeline-card bg-gray-900/40 backdrop-blur-sm border border-gray-700 p-6 rounded-2xl hover:bg-gray-800/60 transition-all duration-300 shadow-xl hover:shadow-blue-500/10 group relative overflow-hidden">
                                 <div
-                                    class="absolute top-0 left-0 w-1 h-full bg-sky-400 group-hover:w-2 transition-all duration-300">
+                                    class="absolute top-0 left-0 w-1 h-full bg-blue-400 group-hover:w-2 transition-all duration-300">
                                 </div>
                                 <div class="flex flex-col mb-4 pl-2">
                                     <h3 class="text-xl font-bold text-white mb-1">
                                         Técnico de suporte de informática</h3>
-                                    <p class="text-sky-400 font-semibold mb-2">Autônomo</p>
+                                    <p class="text-blue-400 font-semibold mb-2">Autônomo</p>
                                     <time datetime="2024-02"
                                         class="text-sm text-gray-400 flex items-center gap-1.5 font-medium">
                                         <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor"
@@ -561,23 +575,23 @@
                     <!-- Item da Timeline 2 -->
                     <div class="relative pl-10 md:pl-0 mb-12" role="listitem">
                         <!-- Ponto na linha -->
-                        <div class="absolute w-5 h-5 bg-gray-800 border-4 border-purple-400 rounded-full mt-5 left-2.5 md:left-1/2 transform -translate-x-1/2 z-10 shadow-[0_0_15px_rgba(192,132,252,0.5)]"
+                        <div class="absolute w-5 h-5 bg-gray-800 border-4 border-blue-400 rounded-full mt-5 left-2.5 md:left-1/2 transform -translate-x-1/2 z-10 shadow-[0_0_15px_rgba(59,130,246,0.5)]"
                             aria-hidden="true"></div>
 
                         <!-- Conteúdo (à esquerda em telas maiores) -->
                         <div class="md:w-[calc(50%-2.5rem)] md:mr-auto md:text-right">
                             <article
-                                class="timeline-card bg-gray-900/40 backdrop-blur-sm border border-gray-700 p-6 rounded-2xl hover:bg-gray-800/60 transition-all duration-300 shadow-xl hover:shadow-purple-500/10 group relative overflow-hidden">
+                                class="timeline-card bg-gray-900/40 backdrop-blur-sm border border-gray-700 p-6 rounded-2xl hover:bg-gray-800/60 transition-all duration-300 shadow-xl hover:shadow-blue-500/10 group relative overflow-hidden">
                                 <div
-                                    class="absolute top-0 right-0 w-1 h-full bg-purple-400 group-hover:w-2 transition-all duration-300 md:block hidden">
+                                    class="absolute top-0 right-0 w-1 h-full bg-blue-400 group-hover:w-2 transition-all duration-300 md:block hidden">
                                 </div>
                                 <div
-                                    class="absolute top-0 left-0 w-1 h-full bg-purple-400 group-hover:w-2 transition-all duration-300 md:hidden block">
+                                    class="absolute top-0 left-0 w-1 h-full bg-blue-400 group-hover:w-2 transition-all duration-300 md:hidden block">
                                 </div>
                                 <div class="flex flex-col mb-4 md:pr-2 pl-2 md:pl-0">
                                     <h3 class="text-xl font-bold text-white mb-1">
                                         Estagiário</h3>
-                                    <p class="text-purple-400 font-semibold mb-2">SEBRAE/RN</p>
+                                    <p class="text-blue-400 font-semibold mb-2">SEBRAE/RN</p>
                                     <time datetime="2021-07"
                                         class="text-sm text-gray-400 flex items-center md:justify-end gap-1.5 font-medium">
                                         <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor"
@@ -609,20 +623,20 @@
                     <!-- Item da Timeline 3 -->
                     <div class="relative pl-10 md:pl-0" role="listitem">
                         <!-- Ponto na linha -->
-                        <div class="absolute w-5 h-5 bg-gray-800 border-4 border-green-400 rounded-full mt-5 left-2.5 md:left-1/2 transform -translate-x-1/2 z-10 shadow-[0_0_15px_rgba(74,222,128,0.5)]"
+                        <div class="absolute w-5 h-5 bg-gray-800 border-4 border-blue-400 rounded-full mt-5 left-2.5 md:left-1/2 transform -translate-x-1/2 z-10 shadow-[0_0_15px_rgba(59,130,246,0.5)]"
                             aria-hidden="true"></div>
 
                         <!-- Conteúdo (à direita em telas maiores) -->
                         <div class="md:w-[calc(50%-2.5rem)] md:ml-auto">
                             <article
-                                class="timeline-card bg-gray-900/40 backdrop-blur-sm border border-gray-700 p-6 rounded-2xl hover:bg-gray-800/60 transition-all duration-300 shadow-xl hover:shadow-green-500/10 group relative overflow-hidden">
+                                class="timeline-card bg-gray-900/40 backdrop-blur-sm border border-gray-700 p-6 rounded-2xl hover:bg-gray-800/60 transition-all duration-300 shadow-xl hover:shadow-blue-500/10 group relative overflow-hidden">
                                 <div
-                                    class="absolute top-0 left-0 w-1 h-full bg-green-400 group-hover:w-2 transition-all duration-300">
+                                    class="absolute top-0 left-0 w-1 h-full bg-blue-400 group-hover:w-2 transition-all duration-300">
                                 </div>
                                 <div class="flex flex-col mb-4 pl-2">
                                     <h3 class="text-xl font-bold text-white mb-1">
                                         Bolsista PIBID</h3>
-                                    <p class="text-green-400 font-semibold mb-2">Universidade Estadual da Paraíba (UEPB)
+                                    <p class="text-blue-400 font-semibold mb-2">Universidade Estadual da Paraíba (UEPB)
                                     </p>
                                     <time datetime="2018"
                                         class="text-sm text-gray-400 flex items-center gap-1.5 font-medium">
@@ -685,7 +699,7 @@
                                         <time datetime="2020-01/2025-12"
                                             class="text-sm text-gray-300 font-medium block">Jan 2020 - Dez 2025</time>
                                         <span
-                                            class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-500/20 text-green-400 border border-green-500/30">
+                                            class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-500/20 text-blue-400 border border-blue-500/30">
                                             <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20"
                                                 aria-hidden="true">
                                                 <path fill-rule="evenodd"
@@ -809,7 +823,7 @@
                     class="max-w-4xl mx-auto bg-white/5 backdrop-blur-xl border border-white/10 p-10 sm:p-14 rounded-3xl shadow-2xl text-center relative overflow-hidden group">
                     <!-- Detalhe luminoso no fundo do card -->
                     <div
-                        class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-1/2 bg-sky-500/10 blur-3xl rounded-full pointer-events-none transition-all duration-700 group-hover:bg-sky-500/20">
+                        class="hidden absolute top-0 left-1/2 -translate-x-1/2 w-full h-1/2 bg-sky-500/10 blur-3xl rounded-full pointer-events-none transition-all duration-700 group-hover:bg-sky-500/20">
                     </div>
 
                     <h2 id="contact-title" class="text-4xl font-extrabold text-white mb-6 tracking-tight relative z-10">
@@ -820,7 +834,7 @@
                     </p>
 
                     <a href="mailto:jvaribeiro.dev@gmail.com"
-                        class="inline-flex items-center justify-center gap-3 text-white font-bold text-lg py-4 px-10 rounded-full project-case-btn project-case-btn--green mt-auto hover:shadow-lg hover:shadow-sky-500/30 transition-all duration-300 transform hover:-translate-y-1 mb-14 relative z-10"
+                        class="inline-flex items-center justify-center gap-3 rounded-full border border-blue-500/30 bg-blue-500 px-10 py-4 text-lg font-bold text-[#263238] transition-all duration-300 hover:-translate-y-1 shadow-[0_10px_24px_rgba(59,130,246,0.2)] hover:shadow-[0_12px_28px_rgba(59,130,246,0.28)] mb-14 relative z-10"
                         aria-label="Enviar email para João Vitor">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -861,16 +875,16 @@
     </main>
 
     <!-- RODAPÉ -->
-    <footer role="contentinfo">
+    <footer class="relative border-t border-[rgba(71,85,105,0.14)] shadow-[0_-10px_30px_rgba(71,85,105,0.06)]" role="contentinfo">
         <!-- Efeito luminoso sutil no fundo -->
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-full bg-sky-500/5 blur-3xl pointer-events-none"
+        <div class="hidden absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-full bg-blue-500/5 blur-3xl pointer-events-none"
             aria-hidden="true"></div>
 
         <div class="container mx-auto px-6 py-8 text-center relative z-10">
-            <p class="text-gray-400 text-sm font-medium tracking-wide">
+            <p class="text-[#52606d] text-sm font-medium tracking-wide">
                 &copy; 2025 Desenvolvido por
                 <a href="https://github.com/jvaribeiro" target="_blank" rel="noopener noreferrer"
-                    class="text-sky-400 font-bold relative inline-block" aria-label="Perfil do GitHub de João Vitor">
+                    class="text-blue-400 font-bold relative inline-block" aria-label="Perfil do GitHub de João Vitor">
                     João Vitor Alexandre Ribeiro
                 </a>.
                 <span class="block mt-2 sm:inline sm:mt-0 sm:ml-2">Todos os direitos reservados.</span>
