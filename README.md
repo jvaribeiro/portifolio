@@ -26,7 +26,7 @@ Este projeto foi construído utilizando as seguintes tecnologias:
 
 ### ⚙️ Como Executar o Projeto
 
-Como este é um projeto estático baseado em HTML, CSS e JavaScript, você não precisa de um servidor ou dependências complexas para executá-lo localmente.
+O projeto continua sendo estático, mas o Tailwind CSS agora é compilado localmente para evitar o CDN em produção. É necessário ter Node.js e npm instalados para gerar o CSS.
 
 1.  Clone este repositório:
     ```bash
@@ -37,9 +37,15 @@ Como este é um projeto estático baseado em HTML, CSS e JavaScript, você não 
     ```bash
     cd Portifolio
     ```
-3.  Abra o arquivo `index.html` diretamente no seu navegador de preferência (Google Chrome, Firefox, etc.).
+3.  Instale as dependências e gere o CSS de produção:
+    ```bash
+    npm install
+    npm run build
+    ```
 
-E pronto! O site estará funcionando.
+4.  Abra o arquivo `index.html` no navegador ou publique a pasta do portfólio. Execute `npm run build` novamente após alterar classes Tailwind no HTML ou JavaScript.
+
+O arquivo compilado é salvo em `asset/tailwind.css`.
 
 ### 🔗 Links
 

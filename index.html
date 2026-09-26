@@ -34,30 +34,8 @@
 
     <!-- Devicon Icons (para os ícones de linguagens) -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif']
-                    },
-                    colors: {
-                        sky: {
-                            300: 'rgba(var(--accent-rgb), <alpha-value>)',
-                            400: 'rgba(var(--accent-rgb), <alpha-value>)',
-                            500: 'rgba(var(--accent-rgb), <alpha-value>)'
-                        },
-                        blue: {
-                            400: 'rgba(var(--accent-rgb), <alpha-value>)',
-                            500: 'rgba(var(--accent-rgb), <alpha-value>)'
-                        },
-                    }
-                }
-            }
-        };
-    </script>
+    <!-- Tailwind CSS compilado para produção -->
+    <link rel="stylesheet" href="asset/tailwind.css">
     <!-- Tema visual e componentes específicos do portfólio -->
     <link rel="stylesheet" href="style.css">
 
