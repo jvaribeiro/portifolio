@@ -298,13 +298,13 @@ body {
   background-color: rgba(var(--accent-rgb), 0.08);
 }
 
-#skills .group\/item i {
+#skills .group\/item img {
   filter: grayscale(0.25);
   opacity: 0.9;
   transition: opacity 0.2s ease, filter 0.2s ease;
 }
 
-#skills .group\/item:hover i {
+#skills .group\/item:hover img {
   filter: grayscale(0);
 }
 
