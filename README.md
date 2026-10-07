@@ -8,11 +8,11 @@ Pré-visualização do Site: <img width="2544" height="1286" alt="image" src="ht
 ### ✨ Funcionalidades
 
 O site está organizado nas seguintes seções:
+- **Meus Projetos:** Uma galeria para exibir meus trabalhos práticos.
 - **Sobre Mim:** Uma breve introdução sobre minha jornada e motivações.
-- **Habilidades:** Uma visão geral das tecnologias com as quais trabalho, divididas por categoria (Front-end, Back-end, etc.).
-- **Minha Jornada:** Uma linha do tempo visual com minhas experiências profissionais mais relevantes.
-- **Formação e Cursos:** Detalhes sobre minha formação acadêmica e cursos complementares.
-- **Projetos:** Uma galeria para exibir meus trabalhos práticos (atualmente com placeholders).
+- **Stack:** Uma visão geral das tecnologias com as quais trabalho, divididas por categoria.
+- **Experiência:** Uma linha do tempo visual com minhas experiências profissionais mais relevantes.
+- **Formação Acadêmica:** Detalhes sobre minha formação acadêmica e cursos complementares.
 - **Contato:** Links diretos para meu E-mail, LinkedIn e GitHub.
 
 ### 🚀 Tecnologias Utilizadas
@@ -22,11 +22,11 @@ Este projeto foi construído utilizando as seguintes tecnologias:
 - **HTML5:** Para a estrutura semântica do conteúdo.
 - **Tailwind CSS:** Para a estilização rápida e responsiva, utilizando classes utilitárias.
 - **JavaScript:** Para a interatividade do menu mobile.
-- **IA: Copilot e Antigravity** : Para auxiliar na criação do layout e na geração de conteúdo.
+- **IA:** Para auxiliar na criação do layout e na geração de conteúdo.
 
 ### ⚙️ Como Executar o Projeto
 
-O projeto continua sendo estático, mas o Tailwind CSS agora é compilado localmente para evitar o CDN em produção. É necessário ter Node.js e npm instalados para gerar o CSS.
+É um projeto estático, mas utiliza o Tailwind CSS que é compilado localmente para evitar o CDN em produção. Por isso é necessário ter Node.js e npm instalados para gerar o CSS.
 
 1.  Clone este repositório:
     ```bash
