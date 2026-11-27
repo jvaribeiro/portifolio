@@ -3,9 +3,10 @@ const mobileMenuButton = document.getElementById('mobile-menu-button');
 const mobileMenu = document.getElementById('mobile-menu');
 
 mobileMenuButton.addEventListener('click', () => {
-    const isExpanded = mobileMenu.classList.contains('hidden');
+    const willOpen = mobileMenu.classList.contains('hidden');
     mobileMenu.classList.toggle('hidden');
-    mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+    mobileMenuButton.setAttribute('aria-expanded', String(willOpen));
+    mobileMenuButton.setAttribute('aria-label', willOpen ? 'Fechar menu de navegação' : 'Abrir menu de navegação');
 });
 
 // Script para fechar menu mobile ao clicar em um link
@@ -14,6 +15,7 @@ mobileNavLinks.forEach(link => {
     link.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
         mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuButton.setAttribute('aria-label', 'Abrir menu de navegação');
     });
 });
 
@@ -62,43 +64,6 @@ const spyObserver = new IntersectionObserver(
 
 sections.forEach(section => spyObserver.observe(section));
 activateNavLink('home');
-
-// Reveal animations — elementos entram suavemente ao rolar
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-function setupReveal(elements, variant = 'reveal', staggerMs = 0) {
-    elements.forEach((el, index) => {
-        el.classList.add(variant);
-        if (staggerMs > 0) {
-            el.style.transitionDelay = `${index * staggerMs}ms`;
-        }
-        revealObserver.observe(el);
-    });
-}
-
-const revealObserver = new IntersectionObserver(
-    (entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                revealObserver.unobserve(entry.target);
-            }
-        });
-    },
-    { rootMargin: '0px 0px -8% 0px', threshold: 0.1 }
-);
-
-if (!prefersReducedMotion) {
-    setupReveal(document.querySelectorAll('main section:not(#home) > div > h2'));
-    setupReveal(document.querySelectorAll('#about article'), 'reveal', 0);
-    setupReveal(document.querySelectorAll('#skills .grid > div'), 'reveal', 100);
-    setupReveal(document.querySelectorAll('#experience [role="listitem"] article'), 'reveal', 150);
-    setupReveal(document.querySelectorAll('#education article'), 'reveal', 80);
-    setupReveal(document.querySelectorAll('#education h3'), 'reveal');
-    setupReveal(document.querySelectorAll('#projects > div > p.text-center'), 'reveal');
-    setupReveal(document.querySelectorAll('#projects .grid > article'), 'reveal', 120);
-    setupReveal(document.querySelectorAll('#contact .max-w-4xl'), 'reveal-scale');
-}
 
 // Case Studies — dados e modal
 const CASE_STUDIES = {
@@ -233,15 +198,6 @@ document.querySelectorAll('.project-card:not(.project-card--soon)').forEach(card
         media.addEventListener('click', (e) => {
             if (e.target.closest('a')) return;
             openCaseStudy(card.dataset.project);
-        });
-        media.setAttribute('tabindex', '0');
-        media.setAttribute('role', 'button');
-        media.setAttribute('aria-label', `Abrir case study: ${card.querySelector('h3')?.textContent || 'projeto'}`);
-        media.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                openCaseStudy(card.dataset.project);
-            }
         });
     }
 });

@@ -54,7 +54,7 @@
         class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[95%] max-w-6xl bg-white/5 border border-white/10 rounded-full shadow-2xl transition-all duration-300"
         role="banner">
         <div class="px-6 py-3 flex justify-between items-center w-full">
-            <a href="https://jvaribeiro.vercel.app/" class="text-xl font-bold text-white flex-shrink-0"
+            <a href="#home" class="text-xl font-bold text-white flex-shrink-0"
                 aria-label="Página inicial de João Vitor Ribeiro">
                 <img src="asset/logo-principal-cores-invertidas.svg" alt="Logo João Vitor Ribeiro"
                     class="h-8 md:h-10 hover:scale-110 transition-transform duration-300">
@@ -121,41 +121,25 @@
 
         <!-- SEÇÃO INICIAL  -->
         <section id="home"
-            class="min-h-screen flex items-center justify-center pt-28 pb-12 relative bg-[#0f172a] border-b border-gray-800/50 overflow-hidden"
+            class="hero-section min-h-screen flex items-center justify-center pt-28 pb-12 relative bg-[#0f172a] border-b border-gray-800/50 overflow-hidden"
             aria-labelledby="hero-title">
-            <!-- Blobs de fundo para o efeito Glassmorphism -->
-            <div
-                class="hidden absolute top-1/4 left-1/4 w-96 h-96 bg-sky-500/20 rounded-full mix-blend-screen filter blur-[100px] opacity-60 animate-skill-blob pointer-events-none">
-            </div>
-            <div
-                class="hidden absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full mix-blend-screen filter blur-[100px] opacity-60 animate-skill-blob-reverse pointer-events-none">
-            </div>
-
+            <div class="hero-grid" aria-hidden="true"></div>
             <div class="container mx-auto px-6 relative z-10 w-full max-w-6xl">
-                <!-- Card estilo Bento Grid/Glassmorphism -->
-                <article
-                    class="bg-white/5 backdrop-blur-xl border border-white/10 p-10 md:p-16 rounded-[2.5rem] shadow-2xl flex flex-col items-center justify-center text-center hover:bg-white/10 transition-all duration-500 group relative overflow-hidden">
-                    <!-- Brilho no hover -->
-                    <div
-                        class="hidden absolute inset-0 bg-gradient-to-tr from-sky-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                    </div>
+                <article class="hero-content group">
+                    <div class="hero-copy">
+                        <p class="hero-eyebrow"><span aria-hidden="true"></span> Desenvolvedor de Software · Brasil</p>
+                        <h1 id="hero-title">
+                            Olá, eu sou
+                            <span>João Vitor.</span>
+                        </h1>
 
-                    <h1 id="hero-title"
-                        class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6 tracking-tight relative z-10">
-                        Olá, eu sou <br class="md:hidden" />
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500">João
-                            Vitor</span>.
-                    </h1>
+                        <p class="hero-description">
+                            Transformo ideias em aplicações web funcionais, responsivas e bem estruturadas.
+                        </p>
 
-                    <p class="text-xl md:text-2xl text-gray-300 font-medium mb-10 max-w-2xl mx-auto relative z-10">
-                        Desenvolvedor de Software <br>
-                        Transformo ideias em aplicações web funcionais, responsivas e bem estruturadas.
-                    </p>
-
-                    <div
-                        class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 w-full relative z-10">
+                        <div class="hero-actions">
                         <a href="#projects"
-                            class="bg-sky-500 text-white font-bold py-4 px-10 rounded-full hover:bg-sky-400 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 w-full sm:w-auto shadow-[0_10px_24px_rgba(59,130,246,0.2)] hover:shadow-[0_12px_28px_rgba(59,130,246,0.28)] flex items-center justify-center gap-2"
+                            class="hero-primary-action"
                             aria-label="Ver projetos de João Vitor">
                             Ver Projetos
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -166,7 +150,7 @@
                         </a>
                         <a href="asset/JOAO-VITOR-ALEXANDRE-RIBEIRO-CURRICULO.pdf"
                             download="JOAO-VITOR-ALEXANDRE-RIBEIRO-CURRICULO.pdf"
-                            class="bg-[#fffdf8] text-[#263238] border border-[rgba(71,85,105,0.14)] font-bold py-4 px-10 rounded-full hover:bg-[#eeebe3] transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 flex items-center justify-center gap-3 w-full sm:w-auto shadow-[0_10px_24px_rgba(71,85,105,0.08)] backdrop-blur-md"
+                            class="hero-secondary-action"
                             aria-label="Baixar currículo de João Vitor">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
                                 fill="currentColor" aria-hidden="true">
@@ -177,6 +161,18 @@
                             Baixar CV
                         </a>
                     </div>
+                    <p class="hero-specialties">Front-end <span>·</span> Back-end <span>·</span> IoT</p>
+                    </div>
+
+                    <figure class="hero-portrait">
+                        <div class="hero-portrait-frame">
+                            <img src="asset/foto-sem-fundo.png" alt="João Vitor A. Ribeiro, desenvolvedor de software">
+                        </div>
+                        <figcaption class="hero-portrait-note">
+                            <span class="hero-portrait-index">01</span>
+                            <span>Ideias que viram<br>produtos reais.</span>
+                        </figcaption>
+                    </figure>
                 </article>
             </div>
         </section>
@@ -185,6 +181,7 @@
         <section id="projects" class="py-24 bg-gray-800 relative border-t border-gray-700/50"
             aria-labelledby="projects-title">
             <div class="container mx-auto px-6 relative z-10 block">
+                <p class="section-eyebrow">01 <span>/</span> Trabalho selecionado</p>
                 <h2 id="projects-title" class="text-4xl font-extrabold text-center text-white mb-6 tracking-tight">Meus
                     Projetos</h2>
                 <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto text-lg">
@@ -197,18 +194,18 @@
 
                     <!-- Card de Projeto 1 (Agência de Viagens) -->
                     <article
-                        class="project-card bg-white/5 backdrop-blur-xl border border-white/10 p-1 rounded-3xl overflow-hidden hover:bg-white/10 transition-all duration-500 shadow-2xl hover:shadow-sky-500/10 group flex flex-col h-full"
+                        class="project-card flex flex-col h-full"
                         role="listitem" data-project="viagens">
                         <div
-                            class="project-card-media group cursor-pointer bg-gray-800/80 h-48 sm:h-56 m-2 rounded-2xl relative overflow-hidden border border-transparent group-hover:border-sky-500/50 transition-colors">
+                            class="project-card-media relative overflow-hidden">
                             <img src="asset/Agencia-de-Viagens.png" alt="Miniatura do projeto Agência de Viagens"
-                                class="w-full h-full object-cover rounded-2xl transition-transform duration-500 group-hover:scale-105" />
-                            <div class="project-card-overlay absolute inset-0 flex items-center justify-center gap-3 rounded-2xl bg-[#263238]/70 backdrop-blur-sm opacity-0 transition-opacity duration-300 group-hover:opacity-100 focus-within:opacity-100" aria-hidden="true">
+                                class="w-full h-full object-cover" />
+                            <div class="project-card-overlay absolute inset-0 flex items-center justify-center gap-3 rounded-2xl bg-[#263238]/70 backdrop-blur-sm">
                                 <a href="https://viagens-landing-page-self.vercel.app/" target="_blank"
-                                    rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full bg-blue-500 px-5 py-2.5 text-sm font-semibold text-[#263238] transition-transform duration-200 hover:scale-105 motion-reduce:transition-none motion-reduce:transform-none"
+                                    rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full bg-blue-500 px-5 py-2.5 text-sm font-semibold text-[#263238]"
                                     onclick="event.stopPropagation()">Ver demo</a>
                                 <a href="https://github.com/jvaribeiro/viagens--landing-page" target="_blank"
-                                    rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-5 py-2.5 text-sm font-semibold text-[#fff] transition-transform duration-200 hover:scale-105 motion-reduce:transition-none motion-reduce:transform-none"
+                                    rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-5 py-2.5 text-sm font-semibold text-[#fff]"
                                     onclick="event.stopPropagation()">Código</a>
                             </div>
                         </div>
@@ -244,9 +241,9 @@
 
                     <!-- Card de Projeto 2 (TCC - Automação Pecuária) -->
                     <article
-                        class="project-card relative bg-white/5 backdrop-blur-xl border border-white/10 p-1 rounded-3xl overflow-hidden hover:bg-white/10 transition-all duration-500 shadow-2xl hover:shadow-sky-500/10 group flex flex-col h-full ring-1 ring-sky-500/20"
+                        class="project-card flex flex-col h-full"
                         role="listitem" data-project="automacao">
-                        <div class="absolute top-4 right-4 z-20">
+                        <div class="project-card-badge">
                             <span
                                 class="inline-flex items-center gap-1.5 bg-sky-500/20 text-sky-300 text-xs font-bold px-3 py-1 rounded-full border border-sky-500/30">
                                 <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
@@ -257,15 +254,15 @@
                             </span>
                         </div>
                         <div
-                            class="project-card-media group cursor-pointer bg-gray-800/80 h-48 sm:h-56 m-2 rounded-2xl relative overflow-hidden border border-transparent group-hover:border-sky-500/50 transition-colors">
+                            class="project-card-media relative overflow-hidden">
                             <img src="asset/Automacao-Pecuaria.jpeg" alt="Miniatura do projeto TCC - Automação Pecuária"
-                                class="w-full h-full object-cover rounded-2xl transition-transform duration-500 group-hover:scale-105" />
-                            <div class="project-card-overlay absolute inset-0 flex items-center justify-center gap-3 rounded-2xl bg-[#263238]/70 backdrop-blur-sm opacity-0 transition-opacity duration-300 group-hover:opacity-100 focus-within:opacity-100" aria-hidden="true">
+                                class="w-full h-full object-cover" />
+                            <div class="project-card-overlay absolute inset-0 flex items-center justify-center gap-3 rounded-2xl bg-[#263238]/70 backdrop-blur-sm">
                                 <a href="https://simulacao-sistema-de-automacao-pecu.vercel.app/" target="_blank"
-                                    rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full bg-blue-500 px-5 py-2.5 text-sm font-semibold text-[#263238] transition-transform duration-200 hover:scale-105 motion-reduce:transition-none motion-reduce:transform-none"
+                                    rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full bg-blue-500 px-5 py-2.5 text-sm font-semibold text-[#263238]"
                                     onclick="event.stopPropagation()">Ver demo</a>
                                 <a href="https://github.com/jvaribeiro/tcc-automacao" target="_blank"
-                                    rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-5 py-2.5 text-sm font-semibold text-[#fff] transition-transform duration-200 hover:scale-105 motion-reduce:transition-none motion-reduce:transform-none"
+                                    rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-5 py-2.5 text-sm font-semibold text-[#fff]"
                                     onclick="event.stopPropagation()">Código</a>
                             </div>
                         </div>
@@ -306,22 +303,17 @@
         <section id="about" class="py-24 bg-gray-800 relative border-t border-gray-700/50"
             aria-labelledby="about-title">
             <div class="container mx-auto px-6 relative z-10 block">
-                <h2 id="about-title" class="text-4xl font-extrabold text-center text-white mb-16 tracking-tight">Sobre
-                    Mim</h2>
+                <p class="section-eyebrow">02 <span>/</span> Sobre mim</p>
+                <h2 id="about-title" class="text-4xl font-extrabold text-center text-white mb-16 tracking-tight">Uma
+                    trajetória feita de curiosidade.</h2>
 
                 <article
-                    class="bg-gray-900/40 backdrop-blur-sm border border-gray-700 p-8 md:p-12 rounded-3xl shadow-xl hover:bg-gray-800/60 transition-all duration-300 flex flex-col md:flex-row items-center gap-12 max-w-6xl mx-auto group">
-                    <!-- Coluna da Imagem -->
-                    <div class="w-full md:w-1/3 flex-shrink-0 relative">
-                        <figure class="relative">
-                            <img src="/asset/foto-sem-fundo.png" alt="Foto de João Vitor A. Ribeiro"
-                                class="w-full h-auto object-cover relative z-10">
-                            <figcaption class="sr-only">João Vitor Alexandre Ribeiro, desenvolvedor de software
-                            </figcaption>
-                        </figure>
+                    class="about-story">
+                    <div class="about-intro">
+                        <span class="about-mark" aria-hidden="true">“</span>
+                        <p>Do suporte técnico ao desenvolvimento: entender o problema vem antes de escrever a primeira linha.</p>
                     </div>
-                    <!-- Coluna do Texto -->
-                    <div class="w-full md:w-2/3 text-gray-300 leading-relaxed text-center md:text-left space-y-6">
+                    <div class="about-copy text-gray-300 leading-relaxed space-y-6">
                         <p class="text-lg">
                             Minha jornada na tecnologia começou no curso de <strong
                                 class="text-white font-semibold">Análise e Desenvolvimento de Sistemas</strong> do
@@ -348,8 +340,9 @@
         <section id="skills" class="py-24 relative bg-[#0f172a] overflow-hidden border-y border-gray-800/50"
             aria-labelledby="skills-title">
             <div class="container mx-auto px-6 relative z-10 block">
+                <p class="section-eyebrow">03 <span>/</span> Ferramentas</p>
                 <h2 id="skills-title" class="text-4xl font-extrabold text-center text-white mb-16 tracking-tight">
-                    Stack</h2>
+                    Tecnologias que uso.</h2>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
 
@@ -490,6 +483,7 @@
         <section id="experience" class="py-24 bg-gray-800 relative border-t border-gray-700/50"
             aria-labelledby="experience-title">
             <div class="container mx-auto px-6 relative z-10 block">
+                <p class="section-eyebrow">04 <span>/</span> Percurso</p>
                 <h2 id="experience-title" class="text-4xl font-extrabold text-center text-white mb-16 tracking-tight">
                     Experiência</h2>
 
@@ -639,6 +633,7 @@
         <!-- SEÇÃO FORMAÇÃO -->
         <section id="education" class="py-20 bg-gray-900" aria-labelledby="education-title">
             <div class="container mx-auto px-6">
+                <p class="section-eyebrow">05 <span>/</span> Formação</p>
                 <h2 id="education-title" class="text-3xl font-bold text-center text-white mb-12">Formação Acadêmica</h2>
                 <div class="max-w-5xl mx-auto">
                     <!-- Formação Acadêmica Principal -->
@@ -788,6 +783,7 @@
         <!-- SEÇÃO CONTATO -->
         <section id="contact" class="py-24 bg-gray-900 relative" aria-labelledby="contact-title">
             <div class="container mx-auto px-6 relative z-10">
+                <p class="section-eyebrow">06 <span>/</span> Contato</p>
                 <div
                     class="max-w-4xl mx-auto bg-white/5 backdrop-blur-xl border border-white/10 p-10 sm:p-14 rounded-3xl shadow-2xl text-center relative overflow-hidden group">
                     <!-- Detalhe luminoso no fundo do card -->
